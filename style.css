@@ -198,6 +198,35 @@ main .subBlock p{
   }
 }
 
+/* print a4 = 794px*1123px */
+@media print{
+  main{
+    min-height: 851px;
+  }
+  header dl div{
+    margin-right: 10px;
+    font-size: 13px;
+  }
+  main h4 span{
+    width: 135px;
+  }
+  main .block{
+    margin-bottom: 14px;
+  }
+  main .block h2{
+    margin-bottom: 4px;
+  }
+  main .subBlock h3{
+    font-size: 13px;
+  }
+  aside .content{
+    font-size: 12px;
+  }
+  main .subBlock p{
+    font-size: 12px;
+  }
+}
+
 /*iconfont*/
 @font-face {font-family: "iconfont";
   src: url('./iconfont/iconfont.eot?t=1498716722934'); /* IE9*/
