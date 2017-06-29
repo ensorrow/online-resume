@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <title>吕哲扬 - 个人简历</title>
+</head>
+<body class="f-clx" id="root">
+
+</body>
+<script id="tpl" type="text/html">
+  <header class="f-clx">
+    <div class="avaWra">
+      <img src="{{header.avatar}}" alt="avatar">
+    </div>
+    <div class="content">
+      <h1>{{header.name}}<span>{{header.slogan}}</span></h1>
+      <dl class="f-clx">
+        <div>
+          <dt><i class="iconfont icon-people"></i></dt>
+          <dd>{{header.age}}岁</dd>
+        </div>
+        <div>
+          <dt><i class="iconfont icon-adress"></i></dt>
+          <dd>{{header.address}}</dd>
+        </div>
+        <div>
+          <dt><i class="iconfont icon-mobile"></i></dt>
+          <dd>{{header.mobile}}</dd>
+        </div>
+        <div>
+          <dt><i class="iconfont icon-email"></i></dt>
+          <dd>{{header.email}}</dd>
+        </div>
+        <div>
+          <dt><i class="iconfont icon-website"></i></dt>
+          <dd><a href="{{header.website}}">{{header.website}}</a></dd>
+        </div>
+        <div>
+          <dt><i class="iconfont icon-github"></i></dt>
+          <dd><a href="{{header.github}}">{{header.github}}</a></dd>
+        </div>
+      </dl>
+    </div>
+  </header>
+  <div class="mainWra">
+    <aside>
+      {{each aside item}}
+      <div class="block">
+        <h2>{{item.title}}</h2>
+        <ul class="content">
+          {{each item.content}}
+          <li>{{$value}}</li>
+          {{/each}}
+        </ul>
+      </div>
+      {{/each}}
+    </aside>
+    <main>
+      {{each main item}}
+      <div class="block">
+        <h2>{{item.title}}</h2>
+        {{each item.content}}
+        <div class="subBlock f-clx">
+          <h3>{{$value.timeRange}}</h3>
+          <div class="content">
+            <h4>{{$value.place}} <span>{{$value.remark}}</span></h4>
+            {{if $value.introduction}}
+            <p>{{$value.introduction}}</p>
+            {{/if}}
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      {{/each}}
+    </main>
+  </div>
+</script>
+<script src="./js/template-web.js"></script>
+<script>
+  function render(data) {
+    var html = template('tpl', data);
+    document.getElementById('root').innerHTML = html;
+  }
+</script>
+<script src="./js/data.js"></script>
+</html>
