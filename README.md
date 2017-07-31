@@ -10,4 +10,4 @@
 
 ## Demo
 
-[http://lvzheyang.top/resume](吕哲扬的个人简历)
+[吕哲扬的个人简历](http://lvzheyang.top/resume)
