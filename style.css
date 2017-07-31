@@ -28,7 +28,8 @@ a:hover{
   clear: both;
 }
 .mainWra{
-  background-color: #f4f4f4;
+  background-color: #fff;
+  overflow: auto;
 }
 
 /*header*/
@@ -36,7 +37,7 @@ header{
   background-color: #26c3b0;
 }
 header .content{
-  padding: 44px 0 44px 40px;
+  padding: 44px 0 44px 24px;
   overflow: auto;
 }
 header .avaWra{
@@ -74,6 +75,7 @@ aside{
   height: 100%;
   box-sizing: border-box;
   padding: 36px 30px;
+  background-color: #f4f4f4;
 }
 aside .block{
   margin-bottom: 20px;
@@ -200,30 +202,73 @@ main .subBlock p{
 
 /* print a4 = 794px*1123px */
 @media print{
+  *{
+    font-family: "方正兰亭黑";
+  }
+  body{
+    width: 794px;
+    height: 1120px;
+  }
+  header .content{
+    padding: 40px 0 40px 30px;
+  }
+  header h1{
+    font-size: 32px;
+  }
+  header img{
+    width: 140px;
+    height: 140px;
+  }
+  header .avaWra{
+    padding: 40px 50px;
+  }
   main{
-    min-height: 851px;
+    padding: 10px 30px;
+    height: 876px;
+  }
+  .mainWra{
+    background-color: #f4f4f4;
   }
   header dl div{
     margin-right: 10px;
     font-size: 13px;
   }
+  main .subBlock h4{
+    font-size: 13px;
+  }
+  main .subBlock h3{
+    width: 110px;
+  }
+  main .subBlock h3::after{
+    right: -29px;
+  }
+  main .subBlock .content{
+    margin-left: 130px;
+  }
   main h4 span{
     width: 135px;
   }
   main .block{
-    margin-bottom: 14px;
+    margin-bottom: 10px;
   }
   main .block h2{
     margin-bottom: 4px;
+    font-size: 20px;
+  }
+  aside .block h2{
+    font-size: 20px;
   }
   main .subBlock h3{
-    font-size: 13px;
+    font-size: 12px;
   }
   aside .content{
     font-size: 12px;
   }
   main .subBlock p{
     font-size: 12px;
+  }
+  main .subBlock{
+    margin-bottom: 0;
   }
 }
 
