@@ -7,3 +7,7 @@
 ## Usage
 
 编辑`/js/data.js`即可生成对应的简历
+
+## Demo
+
+[http://lvzheyang.top/resume](吕哲扬的个人简历)
